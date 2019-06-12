@@ -8,7 +8,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
+  <script>
+ 
+ $(window).scroll(function() {
+	var vpHeight = $(window).height();
+        var isBlack = false;
+        $(".dark-bg").each(function(i, section) {
+            if(isBlack) {
+    	        return;
+            }
+  	   var offset = $(section).offset().top - $(window).scrollTop();
+           if(((offset + vpHeight) >= 0) && ((offset + vpHeight) <= vpHeight)) {
+              isBlack = true;
+              return;
+           }
+       });
+       $(".menu__link").css("color", isBlack ? "white" : "black");
+});
+  // $(window).scroll(function(){
+ 
+  //   $('.navbar-default').toggleClass('scrolled', $(this).scrollTop() > 800);
+  //   // $('nav').css("color: Black");
+    
+   
+  // });
+  </script>
 </head>
 
 <body>
@@ -23,115 +49,204 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="img/w3newbie.png"></a>
+        <a class="navbar-brand" href="#"><img id="MainLogo" src="img/main logo (1).png"></a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
         <ul class="nav navbar-nav navbar-right">
           <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Testim</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="#about">Why Systemec</a></li>
+          <li><a href="#Features">Features</a></li>
+          <!-- <li><a href="#">Pricing</a></li> -->
+          <li><a href="#ContactUS">Contact us</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <div id="home">
     <div class="landing-text">
-      <h1>BOOTSTRAP</h1>
-      <h3>Learn the Basic Building Blocks</h3>
-      <a href="#" class="btn btn-default btn-lg">Get Started</a>
+      <div id="landingTextCol6" class="col-sm-6">
+        <h1>Making your business easy.</h1>
+        <h3>Bring all your system function under one roof</h3>
+        <br>
+        <br>
+        <a href="#" class="btn btn-default btn-lg">Get Started</a>
+      </div>
+    </div>
+    
+          <div class="col-sm-6">
+            <img src="img/productimage systemec.png" class="macbook" alt="">
+        
     </div>
   </div>
   <div id="about">
+    <div class="padding">
+      <div class="container">
+        <div class="row">
+
+          <!-- <div class="col-sm-6">
+            <img src="img/bootstrap.png" alt="">
+
+          </div> -->
+          <div class="col-sm-12 text-center">
+            <h2>We are eager</h2>
+            <p class="lead"> In Systemec we are eager to have the best customer to client connection. We believe that listening to our customers will improve our products thus improving our customers businesses.
+                With a simple customizable interface Systemec will make your valuable time more efficient to handle other things.
+                </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
   <div class="padding">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-          <img src="img/bootstrap.png" alt="">
+       
+        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+          <img src="img/whysystemec_img1.png" class="img-responsive">
         </div>
-        <div class="col-sm-6 text-center">
-          <h2>All About Using Bootstrap</h2>
-          <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-          <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+            <img src="img/whysystemec_img2.png" class="img-responsive">
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+            <img src="img/whysystemec_img3.png" class="img-responsive">
         </div>
       </div>
     </div>
   </div>
-</div>
   <div class="padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <h4>Built with Sass</h4>
-          <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of</p>
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+              
+              <h3 class="Darker">Customer Service & Support</h3>
+              <br>
+              <p class="lead"> ticketing, knowledge management systems, self-service, and live chat.</p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+              
+              <h3 class="Darker">Project Management</h3>
+              <br>
+              <p class="lead"> consectetur adipisicing elit. Quos, ducimus. Rerum, eaque eum corporis ipsam expedita hic tempora saepe 
+                  id dolorum fugiat. Suscipit accusamus magni nam voluptatum eligendi at iusto.</p>
+          </div>
+  
+          <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+              
+              <h3 class="Darker">Planning & Scheduling</h3>
+              <br>
+              <p class="lead">For your your business efficiency you can plan and schedule customer 
+                  appointments with different dates and hours depending on your needs.
+                </p>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="img/sass.png" class="img-responsive">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <h4>And Less</h4>
-          <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of</p>
-        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="fixed">
+  </div> -->
+  <div id="Features">
+    <div class="padding">
+      <div class="container">
+        <br>
+        <div class="row">
+         
+          <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+              
+              <h3 class="DarkerW">Sales Management</h3>
+              <br>
+              <p class="leadW"> consectetur adipisicing elit. Quos, ducimus. Rerum, eaque eum corporis ipsam expedita hic tempora saepe 
+                  id dolorum fugiat. Suscipit accusamus magni nam voluptatum eligendi at iusto.</p>
+          </div>
+          <div id="PicturesFea" class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+              
+             <div class="rectangle">
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <img src="img/less.png" class="img-responsive">
+             </div>
+             
+          </div>
         </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+                
+                <h3 class="DarkerW">Inventory</h3>
+                <br>
+                <p class="leadW"> Systemec provides up to date accurate warehouse inventory. We made it easy 
+                  for the user to add/edit items information, costs, and pricing.</p>
+            </div>
+            <div id="PicturesFea" class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+                
+              <div class="rectangle">
+  
+              </div>
+              
+           </div>
+          </div>
+          <br>
+        <br>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+              
+              <h3 class="DarkerW">Inventory Analysis</h3>
+              <br>
+              <p class="leadW"> This feature tracks your inventory turnover = Cost of goods sold/average inventory,
+                 and number of day’s sale in inventory= Inventory at the end of an accounting period/average daily cost of goods sold.</p>
+          </div>
+          <div id="PicturesFea" class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+              
+            <div class="rectangle">
+
+            </div>
+            
+         </div>
+        </div>
+        <br>
+        <br>
+       
       </div>
     </div>
   </div>
   
-<div id="fixed">
-</div>
-
-<div class="padding">
+<!-- <div id="ContactUS">
+  <div class="padding">
     <div class="container">
       <div class="row">
-          <div class="col-sm-6">
-              <h4>Here is the cooling thing</h4>
-              <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-              <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-            </div>
+        <div class="col-sm-6">
+          <h2>Contact US</h2>
+          <br>
+          <p class="lead">Find out how we can help your bussines.</p>
+          
+        </div>
+
         <div class="col-sm-6">
           <img src="img/bootstrap2.png" alt="">
         </div>
-     
+
       </div>
     </div>
   </div>
+</div> -->
   <footer class="container-fluid text-center">
     <div class="row">
       <div class="col-sm-4">
-        <h3>Contacts US</h3>
+        <h3 class="Darker">Contacts US</h3>
         <br>
-        <h4>our Adrdress and contact info here.</h4>
+        <h4 class="lead" style="color:black;">our Adrdress and contact info here.</h4>
       </div>
       <div class="col-sm-4">
-        <h3>connect</h3>
+        <h3 class="Darker">Connect</h3>
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-google"></a>
         <a href="#" class="fa fa-instagram"></a>
-        </div>
-        <div class="col-sm-4">
-          <img src="img/b.png" class="icon" alt="">
-          </div>
+      </div>
+      <div class="col-sm-4">
+        <img src="img/logo (1).png" class="icon" alt="">
+      </div>
     </div>
   </footer>
 
